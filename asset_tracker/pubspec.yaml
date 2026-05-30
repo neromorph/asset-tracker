@@ -12,58 +12,59 @@ dependencies:
   flutter_localizations:
     sdk: flutter
 
-  # State Management - Flutter 3.44 compatible
+  # State Management
   flutter_riverpod: ^2.6.1
-  riverpod_annotation: ^2.6.1
+  riverpod_annotation: any
 
   # Navigation
-  go_router: ^14.8.1
+  go_router: any
 
   # Database - Offline first
-  drift: ^2.33.0
-  drift_flutter: ^0.3.0
-  sqlite3_flutter_libs: ^0.6.0
+  drift: any
+  drift_flutter: any
+  sqlite3_flutter_libs: any
 
   # Backend
-  supabase_flutter: ^2.8.6
-  flutter_dotenv: ^5.2.1
+  supabase_flutter: any
+  flutter_dotenv: any
 
   # Security
-  flutter_secure_storage: ^9.2.4
-  local_auth: ^2.3.0
+  flutter_secure_storage: any
+  local_auth: any
 
   # UI
-  google_fonts: ^6.2.1
-  tabler_icons: ^2.5.0
-  table_calendar: ^3.2.0
-  fl_chart: ^0.70.2
-  cached_network_image: ^3.4.1
-  shimmer: ^3.0.0
-  flutter_slidable: ^3.1.2
+  google_fonts: any
+  tabler_icons: any
+  table_calendar: any
+  fl_chart: any
+  cached_network_image: any
+  shimmer: any
+  flutter_slidable: any
 
   # Utilities
-  timezone: ^0.10.0
-  intl: ^0.20.2
-  fpdart: ^1.1.0
-  freezed_annotation: ^2.4.4
-  json_annotation: ^4.9.0
-  file_picker: ^8.3.7
-  open_filex: ^4.6.0
-  connectivity_plus: ^7.1.1
-  flutter_local_notifications: ^18.0.1
-  logger: ^2.5.0
+  timezone: any
+  intl: any
+  fpdart: any
+  freezed_annotation: any
+  json_annotation: any
+  file_picker: any
+  open_filex: any
+  connectivity_plus: any
+  flutter_local_notifications: any
+  logger: any
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   integration_test:
     sdk: flutter
-  flutter_lints: ^5.0.0
-  build_runner: ^2.4.15
-  riverpod_generator: ^2.6.4
-  freezed: ^2.5.8
-  json_serializable: ^6.9.4
-  mocktail: ^1.0.4
+  flutter_lints: any
+  build_runner: any
+  drift_dev: any
+  riverpod_generator: any
+  freezed: any
+  json_serializable: any
+  mocktail: any
 
 flutter:
   uses-material-design: true
