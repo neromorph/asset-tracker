@@ -3,7 +3,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:tabler_icons/tabler_icons.dart';
 
 import '../../core/theme/app_colors.dart';
-import '../../core/extensions/date_extensions.dart';
 
 /// Login page following ui-mocks/login/code.html design.
 class LoginPage extends ConsumerStatefulWidget {
