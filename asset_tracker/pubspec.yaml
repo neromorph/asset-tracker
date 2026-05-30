@@ -50,7 +50,7 @@ dependencies:
   file_picker: any
   open_filex: any
   connectivity_plus: any
-  flutter_local_notifications: any
+  flutter_local_notifications: ^18.0.1
   logger: any
 
 dev_dependencies:
