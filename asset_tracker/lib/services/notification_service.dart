@@ -127,17 +127,12 @@ class NotificationService {
       presentSound: true,
     );
 
-    final details = NotificationDetails(
-      android: androidDetails,
-      iOS: iosDetails,
-    );
-
     // Use platform-specific zonedSchedule
     final androidPlugin = _notifications
         .resolvePlatformSpecificImplementation<AndroidFlutterLocalNotificationsPlugin>();
     
     if (androidPlugin != null) {
-      // Android scheduling
+      // Android scheduling with platform-specific API
       await androidPlugin.zonedSchedule(
         record.id.hashCode,
         'Pengingat: ${record.label}',
@@ -149,21 +144,12 @@ class NotificationService {
       );
     } else {
       // iOS scheduling
-      final iosDetails = DarwinNotificationDetails(
-        presentAlert: true,
-        presentBadge: true,
-        presentSound: true,
-      );
-      
       await _notifications.zonedSchedule(
         record.id.hashCode,
         'Pengingat: ${record.label}',
         'Jatuh tempo: ${_formatDate(expiryDate)}. Tap untuk melihat detail.',
         scheduledDate,
         iosDetails,
-        uiLocalNotificationDateInterpretation:
-            UILocalNotificationDateInterpretation.absoluteTime,
-        androidScheduleMode: AndroidScheduleMode.exactAllowWhileIdle,
         payload: record.id,
       );
     }
