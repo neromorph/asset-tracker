@@ -1,0 +1,127 @@
+{
+  "@@locale": "en",
+  "appTitle": "Asset Tracker",
+  "dashboard": "Home",
+  "assets": "Assets",
+  "calendar": "Calendar",
+  "settings": "Settings",
+  "login": "Login",
+  "register": "Register",
+  "email": "Email",
+  "password": "Password",
+  "confirmPassword": "Confirm Password",
+  "fullName": "Full Name",
+  "forgotPassword": "Forgot Password?",
+  "dontHaveAccount": "Don't have an account? {name}",
+  "@dontHaveAccount": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "alreadyHaveAccount": "Already have an account? {name}",
+  "@alreadyHaveAccount": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "signInWithGoogle": "Sign in with Google",
+  "welcomeBack": "Welcome Back",
+  "createAccount": "Create Account",
+  "familySetup": "Family Group",
+  "createFamily": "Create New Group",
+  "joinFamily": "Join with Code",
+  "createFamilyDescription": "Create a new family group and invite your spouse",
+  "joinFamilyDescription": "Enter invite code to join",
+  "familyName": "Group Name",
+  "inviteCode": "Invite Code",
+  "cancel": "Cancel",
+  "create": "Create",
+  "join": "Join",
+  "totalAssets": "Total Assets",
+  "expiringSoon": "Expiring Soon",
+  "expired": "Expired",
+  "active": "Active",
+  "renewed": "Renewed",
+  "daysRemaining": "{count} days left",
+  "@daysRemaining": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "daysOverdue": "{count} days overdue",
+  "@daysOverdue": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "expiredDaysAgo": "Expired {count} days ago",
+  "@expiredDaysAgo": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "addAsset": "Add Asset",
+  "editAsset": "Edit Asset",
+  "assetName": "Asset Name",
+  "category": "Category",
+  "notes": "Notes",
+  "save": "Save",
+  "delete": "Delete",
+  "confirmDelete": "Confirm Delete",
+  "deleteConfirmation": "Are you sure you want to delete {name}?",
+  "@deleteConfirmation": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "extensionRecords": "Extension History",
+  "addExtensionRecord": "Add History",
+  "expiryDate": "Expiry Date",
+  "reminderDays": "Reminder (days before)",
+  "status": "Status",
+  "documents": "Documents",
+  "addDocument": "Add Document",
+  "search": "Search",
+  "searchAssets": "Search assets...",
+  "noAssets": "No assets yet",
+  "noAssetsDescription": "Add your first asset to start tracking expiry",
+  "profile": "Profile",
+  "editProfile": "Edit Profile",
+  "familyGroup": "Family Group",
+  "editFamily": "Edit Group",
+  "generateInviteCode": "Generate Invite Code",
+  "notifications": "Notifications",
+  "enableNotifications": "Enable Notifications",
+  "appearance": "Appearance",
+  "darkMode": "Dark Mode",
+  "security": "Security",
+  "biometricLock": "Biometric Lock",
+  "about": "About",
+  "showAbout": "About App",
+  "privacyPolicy": "Privacy Policy",
+  "signOut": "Sign Out",
+  "errorOccurred": "An error occurred",
+  "tryAgain": "Try Again",
+  "loading": "Loading...",
+  "selectTemplate": "Select Template",
+  "recentAssets": "Recent Assets",
+  "viewAll": "View All",
+  "upcomingExpiry": "Upcoming Expiry",
+  "noUpcomingExpiry": "Nothing expiring soon",
+  "selectDate": "Select Date",
+  "documentTitle": "Document Title",
+  "uploadDocument": "Upload Document",
+  "version": "Version"
+}

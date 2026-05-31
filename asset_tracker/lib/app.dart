@@ -5,6 +5,7 @@ import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:go_router/go_router.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:timezone/data/latest.dart' as tz;
+import 'l10n/app_localizations.dart';
 
 import 'core/theme/app_theme.dart';
 import 'presentation/providers/theme_provider.dart';
@@ -159,6 +160,7 @@ class _AssetTrackerAppState extends ConsumerState<AssetTrackerApp> {
       darkTheme: AppTheme.dark(),
       themeMode: themeMode,
       localizationsDelegates: const [
+        AppLocalizations.delegate,
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,

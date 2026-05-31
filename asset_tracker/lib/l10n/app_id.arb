@@ -1,0 +1,367 @@
+{
+  "@@locale": "id",
+  "appTitle": "Asset Tracker",
+  "@appTitle": {
+    "description": "The app title"
+  },
+  "dashboard": "Beranda",
+  "@dashboard": {
+    "description": "Dashboard navigation label"
+  },
+  "assets": "Aset",
+  "@assets": {
+    "description": "Assets navigation label"
+  },
+  "calendar": "Kalender",
+  "@calendar": {
+    "description": "Calendar navigation label"
+  },
+  "settings": "Pengaturan",
+  "@settings": {
+    "description": "Settings navigation label"
+  },
+  "login": "Masuk",
+  "@login": {
+    "description": "Login button text"
+  },
+  "register": "Daftar",
+  "@register": {
+    "description": "Register button text"
+  },
+  "email": "Email",
+  "@email": {
+    "description": "Email field label"
+  },
+  "password": "Kata Sandi",
+  "@password": {
+    "description": "Password field label"
+  },
+  "confirmPassword": "Konfirmasi Kata Sandi",
+  "@confirmPassword": {
+    "description": "Confirm password field label"
+  },
+  "fullName": "Nama Lengkap",
+  "@fullName": {
+    "description": "Full name field label"
+  },
+  "forgotPassword": "Lupa Kata Sandi?",
+  "@forgotPassword": {
+    "description": "Forgot password link"
+  },
+  "dontHaveAccount": "Belum punya akun? {name}",
+  "@dontHaveAccount": {
+    "description": "Don't have account text",
+    "placeholders": {
+      "name": {
+        "type": "String",
+        "example": "Daftar"
+      }
+    }
+  },
+  "alreadyHaveAccount": "Sudah punya akun? {name}",
+  "@alreadyHaveAccount": {
+    "description": "Already have account text",
+    "placeholders": {
+      "name": {
+        "type": "String",
+        "example": "Masuk"
+      }
+    }
+  },
+  "signInWithGoogle": "Masuk dengan Google",
+  "@signInWithGoogle": {
+    "description": "Google sign in button"
+  },
+  "welcomeBack": "Selamat Datang Kembali",
+  "@welcomeBack": {
+    "description": "Welcome back title"
+  },
+  "createAccount": "Buat Akun",
+  "@createAccount": {
+    "description": "Create account title"
+  },
+  "familySetup": "Grup Keluarga",
+  "@familySetup": {
+    "description": "Family setup page title"
+  },
+  "createFamily": "Buat Grup Baru",
+  "@createFamily": {
+    "description": "Create family option"
+  },
+  "joinFamily": "Gabung dengan Kode",
+  "@joinFamily": {
+    "description": "Join family option"
+  },
+  "createFamilyDescription": "Buat grup keluarga baru dan undang pasangan Anda",
+  "@createFamilyDescription": {
+    "description": "Create family option description"
+  },
+  "joinFamilyDescription": "Masukkan kode undangan untuk bergabung",
+  "@joinFamilyDescription": {
+    "description": "Join family option description"
+  },
+  "familyName": "Nama Grup",
+  "@familyName": {
+    "description": "Family name field label"
+  },
+  "inviteCode": "Kode Undangan",
+  "@inviteCode": {
+    "description": "Invite code field label"
+  },
+  "cancel": "Batal",
+  "@cancel": {
+    "description": "Cancel button"
+  },
+  "create": "Buat",
+  "@create": {
+    "description": "Create button"
+  },
+  "join": "Gabung",
+  "@join": {
+    "description": "Join button"
+  },
+  "totalAssets": "Total Aset",
+  "@totalAssets": {
+    "description": "Total assets label"
+  },
+  "expiringSoon": "Mendekati Kedaluwarsa",
+  "@expiringSoon": {
+    "description": "Expiring soon label"
+  },
+  "expired": "Kadaluwarsa",
+  "@expired": {
+    "description": "Expired label"
+  },
+  "active": "Aktif",
+  "@active": {
+    "description": "Active label"
+  },
+  "renewed": "Diperbarui",
+  "@renewed": {
+    "description": "Renewed label"
+  },
+  "daysRemaining": "{count} hari lagi",
+  "@daysRemaining": {
+    "description": "Days remaining text",
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "example": "5"
+      }
+    }
+  },
+  "daysOverdue": "{count} hari terlewat",
+  "@daysOverdue": {
+    "description": "Days overdue text",
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "example": "3"
+      }
+    }
+  },
+  "expiredDaysAgo": "Terlewat {count} hari",
+  "@expiredDaysAgo": {
+    "description": "Expired days ago text",
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "example": "5"
+      }
+    }
+  },
+  "addAsset": "Tambah Aset",
+  "@addAsset": {
+    "description": "Add asset button"
+  },
+  "editAsset": "Edit Aset",
+  "@editAsset": {
+    "description": "Edit asset title"
+  },
+  "assetName": "Nama Aset",
+  "@assetName": {
+    "description": "Asset name field label"
+  },
+  "category": "Kategori",
+  "@category": {
+    "description": "Category field label"
+  },
+  "notes": "Catatan",
+  "@notes": {
+    "description": "Notes field label"
+  },
+  "save": "Simpan",
+  "@save": {
+    "description": "Save button"
+  },
+  "delete": "Hapus",
+  "@delete": {
+    "description": "Delete button"
+  },
+  "confirmDelete": "Konfirmasi Hapus",
+  "@confirmDelete": {
+    "description": "Confirm delete dialog title"
+  },
+  "deleteConfirmation": "Apakah Anda yakin ingin menghapus {name}?",
+  "@deleteConfirmation": {
+    "description": "Delete confirmation message",
+    "placeholders": {
+      "name": {
+        "type": "String",
+        "example": "aset ini"
+      }
+    }
+  },
+  "extensionRecords": "Riwayat Perpanjangan",
+  "@extensionRecords": {
+    "description": "Extension records section title"
+  },
+  "addExtensionRecord": "Tambah Riwayat",
+  "@addExtensionRecord": {
+    "description": "Add extension record button"
+  },
+  "expiryDate": "Tanggal Kedaluwarsa",
+  "@expiryDate": {
+    "description": "Expiry date field label"
+  },
+  "reminderDays": "Pengingat (hari sebelumnya)",
+  "@reminderDays": {
+    "description": "Reminder days field label"
+  },
+  "status": "Status",
+  "@status": {
+    "description": "Status field label"
+  },
+  "documents": "Dokumen",
+  "@documents": {
+    "description": "Documents section title"
+  },
+  "addDocument": "Tambah Dokumen",
+  "@addDocument": {
+    "description": "Add document button"
+  },
+  "search": "Cari",
+  "@search": {
+    "description": "Search placeholder"
+  },
+  "searchAssets": "Cari aset...",
+  "@searchAssets": {
+    "description": "Search assets placeholder"
+  },
+  "noAssets": "Belum ada aset",
+  "@noAssets": {
+    "description": "Empty assets message"
+  },
+  "noAssetsDescription": "Tambahkan aset pertama Anda untuk mulai melacak kedaluwarsa",
+  "@noAssetsDescription": {
+    "description": "Empty assets description"
+  },
+  "profile": "Profil",
+  "@profile": {
+    "description": "Profile section title"
+  },
+  "editProfile": "Edit Profil",
+  "@editProfile": {
+    "description": "Edit profile option"
+  },
+  "familyGroup": "Grup Keluarga",
+  "@familyGroup": {
+    "description": "Family group section title"
+  },
+  "editFamily": "Edit Grup",
+  "@editFamily": {
+    "description": "Edit family option"
+  },
+  "generateInviteCode": "Buat Kode Undangan",
+  "@generateInviteCode": {
+    "description": "Generate invite code option"
+  },
+  "notifications": "Notifikasi",
+  "@notifications": {
+    "description": "Notifications section title"
+  },
+  "enableNotifications": "Aktifkan Notifikasi",
+  "@enableNotifications": {
+    "description": "Enable notifications option"
+  },
+  "appearance": "Tampilan",
+  "@appearance": {
+    "description": "Appearance section title"
+  },
+  "darkMode": "Mode Gelap",
+  "@darkMode": {
+    "description": "Dark mode option"
+  },
+  "security": "Keamanan",
+  "@security": {
+    "description": "Security section title"
+  },
+  "biometricLock": "Kunci Biometrik",
+  "@biometricLock": {
+    "description": "Biometric lock option"
+  },
+  "about": "Tentang",
+  "@about": {
+    "description": "About section title"
+  },
+  "showAbout": "Tentang Aplikasi",
+  "@showAbout": {
+    "description": "Show about option"
+  },
+  "privacyPolicy": "Kebijakan Privasi",
+  "@privacyPolicy": {
+    "description": "Privacy policy option"
+  },
+  "signOut": "Keluar",
+  "@signOut": {
+    "description": "Sign out option"
+  },
+  "errorOccurred": "Terjadi kesalahan",
+  "@errorOccurred": {
+    "description": "Generic error message"
+  },
+  "tryAgain": "Coba Lagi",
+  "@tryAgain": {
+    "description": "Try again button"
+  },
+  "loading": "Memuat...",
+  "@loading": {
+    "description": "Loading message"
+  },
+  "selectTemplate": "Pilih Template",
+  "@selectTemplate": {
+    "description": "Select template page title"
+  },
+  "recentAssets": "Aset Terbaru",
+  "@recentAssets": {
+    "description": "Recent assets section title"
+  },
+  "viewAll": "Lihat Semua",
+  "@viewAll": {
+    "description": "View all link"
+  },
+  "upcomingExpiry": "Kedaluwarsa Mendatang",
+  "@upcomingExpiry": {
+    "description": "Upcoming expiry section title"
+  },
+  "noUpcomingExpiry": "Tidak ada yang akan kedaluwarsa",
+  "@noUpcomingExpiry": {
+    "description": "No upcoming expiry message"
+  },
+  "selectDate": "Pilih Tanggal",
+  "@selectDate": {
+    "description": "Select date prompt"
+  },
+  "documentTitle": "Judul Dokumen",
+  "@documentTitle": {
+    "description": "Document title field label"
+  },
+  "uploadDocument": "Unggah Dokumen",
+  "@uploadDocument": {
+    "description": "Upload document button"
+  },
+  "version": "Versi",
+  "@version": {
+    "description": "Version label"
+  }
+}
