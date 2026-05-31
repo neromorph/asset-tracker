@@ -1,5 +1,4 @@
 import '../../core/utils/expiry_engine.dart';
-import '../../core/extensions/date_extensions.dart';
 import 'sync_status.dart';
 import 'expiry_status.dart';
 
@@ -57,6 +56,8 @@ class Asset {
     SyncStatus? syncStatus,
     DateTime? createdAt,
     DateTime? updatedAt,
+    DateTime? expiryDate,
+    int? defaultRemindDaysBefore,
   }) {
     return Asset(
       id: id ?? this.id,
@@ -72,6 +73,8 @@ class Asset {
       syncStatus: syncStatus ?? this.syncStatus,
       createdAt: createdAt ?? this.createdAt,
       updatedAt: updatedAt ?? this.updatedAt,
+      expiryDate: expiryDate ?? this.expiryDate,
+      defaultRemindDaysBefore: defaultRemindDaysBefore ?? this.defaultRemindDaysBefore,
     );
   }
 
@@ -94,6 +97,10 @@ class Asset {
       ),
       createdAt: DateTime.parse(json['created_at'] as String),
       updatedAt: DateTime.parse(json['updated_at'] as String),
+      expiryDate: json['expiry_date'] != null
+          ? DateTime.parse(json['expiry_date'] as String)
+          : null,
+      defaultRemindDaysBefore: (json['default_remind_days_before'] as int?) ?? 7,
     );
   }
 
@@ -113,6 +120,8 @@ class Asset {
       'sync_status': syncStatus.name,
       'created_at': createdAt.toIso8601String(),
       'updated_at': updatedAt.toIso8601String(),
+      if (expiryDate != null) 'expiry_date': expiryDate!.toIso8601String(),
+      'default_remind_days_before': defaultRemindDaysBefore,
     };
   }
 
@@ -137,5 +146,8 @@ class Asset {
   }
 
   /// Whether the asset is expired.
-  bool get isExpired => ExpiryEngine.isOverdue(expiryDate ?? DateTime.now());
+  bool get isExpired {
+    if (expiryDate == null) return false;
+    return ExpiryEngine.isOverdue(expiryDate!);
+  }
 }

@@ -67,7 +67,18 @@ class SupabaseService {
     String? orderBy,
     bool ascending = false,
   }) async {
-    final response = await _client.from(table).select();
+    PostgrestFilterBuilder<PostgrestList> query = _client.from(table).select();
+    if (whereColumn != null) {
+      query = query.eq(whereColumn, whereValue);
+    }
+    PostgrestTransformBuilder<PostgrestList> result = query;
+    if (orderBy != null) {
+      result = result.order(orderBy, ascending: ascending);
+    }
+    if (limit != null) {
+      result = result.limit(limit);
+    }
+    final response = await result;
     return response as List<Map<String, dynamic>>;
   }
 
