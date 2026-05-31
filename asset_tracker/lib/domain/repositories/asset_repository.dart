@@ -7,6 +7,9 @@ import '../entities/asset.dart';
 /// Following AGENTS.md section 2.3 - repository pattern.
 /// Implementations must follow offline-first: write to local DB first, then sync.
 abstract class AssetRepository {
+  /// Get all assets for a family group.
+  Future<Either<AppException, List<Asset>>> getAssets(String familyGroupId);
+
   /// Watch a stream of all assets for a family group.
   /// Returns non-archived assets ordered by creation date.
   Stream<List<Asset>> watchAssets(String familyGroupId);

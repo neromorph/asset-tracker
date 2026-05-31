@@ -127,32 +127,22 @@ class NotificationService {
       presentSound: true,
     );
 
-    // Use platform-specific zonedSchedule
-    final androidPlugin = _notifications
-        .resolvePlatformSpecificImplementation<AndroidFlutterLocalNotificationsPlugin>();
-    
-    if (androidPlugin != null) {
-      // Android scheduling with platform-specific API
-      await androidPlugin.zonedSchedule(
-        record.id.hashCode,
-        'Pengingat: ${record.label}',
-        'Jatuh tempo: ${_formatDate(expiryDate)}. Tap untuk melihat detail.',
-        scheduledDate,
-        androidDetails,
-        androidScheduleMode: AndroidScheduleMode.exactAllowWhileIdle,
-        payload: record.id,
-      );
-    } else {
-      // iOS scheduling
-      await _notifications.zonedSchedule(
-        record.id.hashCode,
-        'Pengingat: ${record.label}',
-        'Jatuh tempo: ${_formatDate(expiryDate)}. Tap untuk melihat detail.',
-        scheduledDate,
-        iosDetails,
-        payload: record.id,
-      );
-    }
+    final details = NotificationDetails(
+      android: androidDetails,
+      iOS: iosDetails,
+    );
+
+    // Schedule the notification using the standard API
+    await _notifications.zonedSchedule(
+      record.id.hashCode,
+      'Pengingat: ${record.label}',
+      'Jatuh tempo: ${_formatDate(expiryDate)}. Tap untuk melihat detail.',
+      scheduledDate,
+      details,
+      androidScheduleMode: AndroidScheduleMode.exactAllowWhileIdle,
+      uiLocalNotificationDateInterpretation: UILocalNotificationDateInterpretation.absoluteTime,
+      payload: record.id,
+    );
   }
 
   /// Cancel a scheduled notification for an extension record.
@@ -202,7 +192,6 @@ class NotificationService {
   /// Handle notification tap - navigate to extension record detail.
   void _onNotificationTap(NotificationResponse response) {
     // TODO: Navigate to extension record detail screen
-    // Use GoRouter or navigator to navigate to /records/:id
   }
 
   String _getChannelId(int daysRemaining) {

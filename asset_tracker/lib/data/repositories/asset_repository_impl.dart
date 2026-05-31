@@ -14,6 +14,16 @@ class AssetRepositoryImpl implements AssetRepository {
   AssetRepositoryImpl(this._database);
 
   @override
+  Future<Either<AppException, List<Asset>>> getAssets(String familyGroupId) async {
+    try {
+      final assets = await _database.getAssets(familyGroupId);
+      return Right(assets);
+    } catch (e) {
+      return Left(StorageException('Failed to get assets: $e'));
+    }
+  }
+
+  @override
   Stream<List<Asset>> watchAssets(String familyGroupId) {
     return _database.watchAssets(familyGroupId);
   }

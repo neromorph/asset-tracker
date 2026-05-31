@@ -1,4 +1,7 @@
+import '../../core/utils/expiry_engine.dart';
+import '../../core/extensions/date_extensions.dart';
 import 'sync_status.dart';
+import 'expiry_status.dart';
 
 /// Asset entity - a family-owned record created from a template or custom.
 /// Part of the domain layer - pure Dart object with no framework dependencies.
@@ -17,6 +20,10 @@ class Asset {
   final DateTime createdAt;
   final DateTime updatedAt;
 
+  // Expiry-related fields (populated when needed)
+  final DateTime? expiryDate;
+  final int defaultRemindDaysBefore;
+
   const Asset({
     required this.id,
     required this.familyGroupId,
@@ -31,6 +38,8 @@ class Asset {
     required this.syncStatus,
     required this.createdAt,
     required this.updatedAt,
+    this.expiryDate,
+    this.defaultRemindDaysBefore = 7,
   });
 
   /// Create a copy with updated fields.
@@ -114,4 +123,19 @@ class Asset {
 
   @override
   int get hashCode => id.hashCode;
+
+  /// Computed expiry status.
+  ExpiryStatus get status {
+    if (expiryDate == null) return ExpiryStatus.none;
+    return ExpiryEngine.computeStatus(expiryDate!, defaultRemindDaysBefore);
+  }
+
+  /// Computed days remaining until expiry.
+  int get daysRemaining {
+    if (expiryDate == null) return 0;
+    return ExpiryEngine.daysRemaining(expiryDate!);
+  }
+
+  /// Whether the asset is expired.
+  bool get isExpired => ExpiryEngine.isOverdue(expiryDate ?? DateTime.now());
 }
